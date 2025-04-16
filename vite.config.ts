@@ -30,11 +30,11 @@ export default defineConfig({
             ignore: ["lib/**/*.d.ts"],
           })
           .map((file) => [
-            // The name of the entry point
-            // lib/nested/foo.ts becomes nested/foo
+             // 엔트리 포인트의 이름
+            // lib/nested/foo.ts는 nested/foo로 변환됩니다
             relative("lib", file.slice(0, file.length - extname(file).length)),
-            // The absolute path to the entry file
-            // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+            // 엔트리 포인트 파일의 절대 경로
+            // lib/nested/foo.ts는 /project/lib/nested/foo.ts로 변환됩니다
             fileURLToPath(new URL(file, import.meta.url)),
           ])
       ),
