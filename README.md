@@ -21,6 +21,11 @@ glob:
 2. 작성한 컴포넌트를 `lib/components/main.ts`의 export로 추가합니다.
 3. `npm run build`로 번들링된 컴포넌트 라이브러리를 확인 가능합니다.
 
+## To do
+
+- [ ] tailwindcss to native css
+- [ ] npm 배포
+
 ## 참고
 
 - [Create a Component Library Fast🚀(using Vite's library mode) - DEV Community](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma)
