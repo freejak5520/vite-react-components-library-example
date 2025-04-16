@@ -1,54 +1,27 @@
-# React + TypeScript + Vite
+# Components-lib
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+vite library mode를 사용해 React 컴포넌트 라이브러리를 구현하고 빌드 합니다.
 
-Currently, two official plugins are available:
+컴포넌트 라이브러리 구현을 위해 아래의 패키지를 사용했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```md
+**vite-plugin-dts**
+TypeScript의 타입 정의 파일(.d.ts)을 자동으로 생성해주는 Vite 플러그인입니다. 라이브러리 사용자가 TypeScript를 사용할 때 타입 지원을 받을 수 있게 해줍니다.
 
-## Expanding the ESLint configuration
+**vite-plugin-lib-inject-css**
+컴포넌트 라이브러리의 CSS를 자동으로 번들링하고 주입해주는 플러그인입니다. 라이브러리 사용자가 별도의 CSS 설정 없이도 스타일이 적용된 컴포넌트를 사용할 수 있게 해줍니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+**glob**
+파일 시스템에서 패턴 매칭을 통해 파일들을 찾아주는 유틸리티입니다. 컴포넌트 파일들을 자동으로 찾아서 번들링할 때 유용하게 사용됩니다.
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 작업 방법
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. `lib/components`디렉토리에 컴포넌트를 작성합니다.
+2. 작성한 컴포넌트를 `lib/components/main.ts`의 export로 추가합니다.
+3. `npm run build`로 번들링된 컴포넌트 라이브러리를 확인 가능합니다.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 참고
+
+- [Create a Component Library Fast🚀(using Vite's library mode) - DEV Community](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma)
+- [Building Your Own UI Library Package with Vite(Library Mode), React, TS, and TailwindCSS. - nuri.gg / software engineer](https://nuri.gg/vite-react-typescript-tailwind-npm-package/)
