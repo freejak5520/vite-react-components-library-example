@@ -24,7 +24,10 @@ glob:
 ## To do
 
 - [x] tailwindcss to native css
-- [ ] npm 배포
+- [x] npm 배포
+- [ ] npm 배포 방법 README 작성
+- [ ] Storybook 적용
+- [ ] Chromatic 배포
 
 ## 참고
 
