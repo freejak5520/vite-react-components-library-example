@@ -23,7 +23,7 @@ glob:
 
 ## To do
 
-- [ ] tailwindcss to native css
+- [x] tailwindcss to native css
 - [ ] npm 배포
 
 ## 참고

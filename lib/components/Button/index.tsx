@@ -1,7 +1,5 @@
 import { PropsWithChildren } from "react";
 
-import styles from "./styles.module.css";
-
 export function Button({ children }: PropsWithChildren) {
-  return <button className={styles.button}>{children}</button>;
+  return <button className="bg-amber-500 p-6">{children}</button>;
 }
