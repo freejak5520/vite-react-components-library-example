@@ -28,7 +28,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
-    "tsc": "tsc --p ./tsconfig.json"
+    "tsc": "tsc --p ./tsconfig.json",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "acorn": "^8.14.1",

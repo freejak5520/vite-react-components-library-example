@@ -17,9 +17,38 @@ glob:
 
 ## 작업 방법
 
-1. `lib/components`디렉토리에 컴포넌트를 작성합니다.
-2. 작성한 컴포넌트를 `lib/components/main.ts`의 export로 추가합니다.
-3. `npm run build`로 번들링된 컴포넌트 라이브러리를 확인 가능합니다.
+### 브랜치 생성
+
+작업 진행을 위해 브랜치를 생성합니다.
+
+### 배포 버전 설정
+
+해당 작업이 배포 될 버전을 `package.json`에 작성합니다.
+최종 배포 이전에는 0.0.1-alpha.1 처럼 alpha, beta 등 자유롭게 임시 버전을 사용합니다.
+
+```json:package.json
+{
+  "version": "0.0.1-alpha.2",
+}
+```
+
+### 디렉토리
+
+lib 디렉토리 에서 작업을 시작합니다.
+필요할 경우 하위 디렉토리를 추가해서 작업을 진행할 수 있습니다.
+
+- `components`: 컴포넌트
+- `utils`: 공용 유틸 함수
+- `hooks`: 공용 리액트 훅
+
+### 배포하기
+
+작업이 완료될 경우 npm 배포를 진행합니다.
+
+```bash
+# 배포하기
+npm run publish
+```
 
 ## To do
 
@@ -28,6 +57,7 @@ glob:
 - [ ] npm 배포 방법 README 작성
 - [ ] Storybook 적용
 - [ ] Chromatic 배포
+- [ ] npm 배포 자동화(github action)
 
 ## 참고
 
