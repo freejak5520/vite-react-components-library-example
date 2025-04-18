@@ -13,7 +13,8 @@ export default defineConfig({
     libInjectCss(),
     dts({
       include: ["lib"],
-      tsconfigPath: "./tsconfig.build.json",
+      tsconfigPath: "./tsconfig.lib.json",
+      exclude: ["lib/**/*.stories.{ts,tsx}", "lib/**/*.test.{ts,tsx}"],
     }),
   ],
   build: {
@@ -23,14 +24,18 @@ export default defineConfig({
     },
     copyPublicDir: false,
     rollupOptions: {
-      external: ["react", "react/jsx-runtime"],
+      external: ["react", "react/jsx-runtime", "react-dom"],
       input: Object.fromEntries(
         glob
           .sync("lib/**/*.{ts,tsx}", {
-            ignore: ["lib/**/*.d.ts"],
+            ignore: [
+              "lib/**/*.d.ts",
+              "lib/**/*.stories.{ts,tsx}",
+              "lib/**/*.test.{ts,tsx}",
+            ],
           })
           .map((file) => [
-             // 엔트리 포인트의 이름
+            // 엔트리 포인트의 이름
             // lib/nested/foo.ts는 nested/foo로 변환됩니다
             relative("lib", file.slice(0, file.length - extname(file).length)),
             // 엔트리 포인트 파일의 절대 경로
