@@ -59,6 +59,11 @@ npm run publish
 - [ ] Chromatic 배포
 - [ ] npm 배포 자동화(github action)
 
+## 링크
+
+- [Chromatic](https://main--6804dc2adb0069525482d99e.chromatic.com/)
+- [NPM](https://www.npmjs.com/package/@freejak5520/vite-react-components-library)
+
 ## 참고
 
 - [Create a Component Library Fast🚀(using Vite's library mode) - DEV Community](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma)
