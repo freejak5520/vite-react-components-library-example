@@ -55,7 +55,7 @@ npm run publish
 - [x] tailwindcss to native css
 - [x] npm 배포
 - [ ] npm 배포 방법 README 작성
-- [ ] Storybook 적용
+- [x] Storybook 적용
 - [ ] Chromatic 배포
 - [ ] npm 배포 자동화(github action)
 
