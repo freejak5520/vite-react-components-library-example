@@ -38,14 +38,15 @@
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --exit-zero-on-changes --auto-accept-changes"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "react": "^19.0.0 || ^18.0.0",
+    "react-dom": "^19.0.0 || ^18.0.0"
   },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/addon-interactions": "^8.6.12",
-    "@storybook/addon-onboarding": "^8.6.12",
-    "@storybook/blocks": "^8.6.12",
     "@storybook/react": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
     "@storybook/test": "^8.6.12",
@@ -71,10 +72,6 @@
     "vite": "^6.3.0",
     "vite-plugin-dts": "^4.5.3",
     "vite-plugin-lib-inject-css": "^2.2.2"
-  },
-  "peerDependencies": {
-    "react": "^19.0.0 || ^18.0.0",
-    "react-dom": "^19.0.0 || ^18.0.0"
   },
   "sideEffects": [
     "**/*.css"
