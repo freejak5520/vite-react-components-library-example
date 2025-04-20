@@ -1,15 +1,15 @@
 {
-  "name": "@jj-forge/components-lib",
+  "name": "@freejak5520/components-lib",
   "version": "0.0.1-alpha.1",
   "private": false,
   "description": "vite library mode를 사용해 React 컴포넌트 라이브러리를 구현하고 빌드 합니다.",
-  "homepage": "https://github.com/jj-forge/vite-react-components-library-example#readme",
+  "homepage": "https://github.com/freejak5520/vite-react-components-library-example#readme",
   "bugs": {
-    "url": "https://github.com/jj-forge/vite-react-components-library-example/issues"
+    "url": "https://github.com/freejak5520/vite-react-components-library-example/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jj-forge/vite-react-components-library-example.git"
+    "url": "git+https://github.com/freejak5520/vite-react-components-library-example.git"
   },
   "license": "ISC",
   "author": "",
@@ -22,13 +22,17 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc --p ./tsconfig.build.json && vite build",
+    "build": "vite build",
+    "build:web": "vite build --config vite.build.config.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublishOnly": "npm run build",
-    "tsc": "tsc --p ./tsconfig.json",
+    "tsc": "tsc --p ./tsconfig.build.json --watch",
     "publish": "npm publish --access public",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
